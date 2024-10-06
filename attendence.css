@@ -1,0 +1,18 @@
+body {
+    background-image: url('https://media.istockphoto.com/id/1470617656/vector/ai-artificial-intelligence-chipset-on-circuit-board-in-futuristic-concept-suitable-for.jpg?s=612x612&w=0&k=20&c=_wC-pphyNI2muaUHG4N9JuYXxJEMDuzx56Dvzr8ZDUk='); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Set body height to fill viewport */
+}
+.background {
+    background-image: url('https://media.istockphoto.com/id/1470617656/vector/ai-artificial-intelligence-chipset-on-circuit-board-in-futuristic-concept-suitable-for.jpg?s=612x612&w=0&k=20&c=_wC-pphyNI2muaUHG4N9JuYXxJEMDuzx56Dvzr8ZDUk='); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; /* Set div height to fill viewport */
+    display: flex; /* Optional: Center content */
+    justify-content: center; /* Optional: Center content */
+    align-items: center; /* Optional: Center content */
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light pastel background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4CAF50; /* Green header */
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .summary {
+            display: flex;
+            justify-content: space-around;
+        }
+        .summary div {
+            flex: 1;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .charts, .reports, .classes, .notifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attendance Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="card summary">
+            <div>
+                <h2>Total Students</h2>
+                <p>10</p>
+            </div>
+            <div>
+                <h2>Present</h2>
+                <p>8</p>
+            </div>
+            <div>
+                <h2>Absent</h2>
+                <p>1</p>
+            </div>
+            <div>
+                <h2>On Duty (OD)</h2>
+                <p>1</p>
+            </div>
+        </div>
+
+        <div class="card charts">
+            <div>
+                <h2>Attendance Overview</h2>
+                <canvas id="attendanceOverviewChart" width="400" height="200"></canvas>
+                <!-- Insert chart code here -->
+            </div>
+            <div>
+                <h2>Daily Attendance Trend</h2>
+                <canvas id="dailyAttendanceTrendChart" width="400" height="200"></canvas>
+                <!-- Insert chart code here -->
+            </div>
+        </div>
+
+        <div class="card reports">
+<div>
+     <div>
+    <h2>Individual Student Reports</h2>
+    <div style="line-height: 2.5;">
+        1. Arden | Attendance: 92% <br>
+        2. Liora | Attendance: 85% <br>
+        3. Caden | Attendance: 98% <br>
+        4. Elara | Attendance: 86% <br>
+        5. Zayn | Attendance: 90% <br>
+        6. Mira | Attendance: 84% <br>
+        7. Rylan | Attendance: 97% <br>
+        8. Selena | Attendance: 89% <br>
+        9. Kellan | Attendance: 91% <br>
+        10. Tom Cruise | Attendance: 87%
+       <!-- Add more students as needed -->
+
+    </div>
+</div>
+<br>
+<br>
+ <div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; width: fit-content;">
+    <h2 style="margin: 0; color: #333;">Class Attendance Breakdown </h2>
+    <div style="line-height: 2.5; color: #555;">
+        <strong>Section "C":</strong> 
+        <span style="color: #4CAF50;">Present - 82%</span>, 
+        <span style="color: #F44336;">Absent - 18%</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample code to create a pie chart for Attendance Overview
+        const ctx1 = document.getElementById('attendanceOverviewChart').getContext('2d');
+        const attendanceOverviewChart = new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['Present', 'Absent', 'On Duty'],
+                datasets: [{
+                    label: 'Attendance Overview',
+                    data: [8, 1, 1],
+                    backgroundColor: ['#4CAF50', '#f44336', '#FF9800'],
+                }]
+            }
+        });
+
+        // Sample code to create a line chart for Daily Attendance Trend
+        const ctx2 = document.getElementById('dailyAttendanceTrendChart').getContext('2d');
+        const dailyAttendanceTrendChart = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+                datasets: [{
+                    label: 'Daily Attendance',
+                    data: [80, 75, 85, 90, 88],
+                    borderColor: '#2196F3',
+                    fill: false,
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
